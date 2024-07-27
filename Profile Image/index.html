@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile CV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-image-container">
+            <img id="profileImage" src="default-profile.png" alt="Profile Image">
+            <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+            <button id="uploadButton">Upload Image</button>
+        </div>
+        <form id="profileForm">
+            <ul>
+                <li>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                </li>
+                <li>
+                    <label for="fatherName">Father Name:</label>
+                    <input type="text" id="fatherName" name="fatherName">
+                </li>
+                <li>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email">
+                </li>
+                <li>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                </li>
+                <li>
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location">
+                </li>
+                <li>
+                    <label for="experience">Experience:</label>
+                    <input type="text" id="experience" name="experience">
+                </li>
+                <li>
+                    <label for="education">Education:</label>
+                    <input type="text" id="education" name="education">
+                </li>
+                <li>
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                </li>
+            </ul>
+            <button type="submit">Save Profile</button>
+        </form>
+        <button id="downloadCV">Download CV</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
